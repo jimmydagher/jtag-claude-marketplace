@@ -1,0 +1,19 @@
+{
+  "name": "claude-marketplace",
+  "owner": {
+    "name": "Jimmy Dagher"
+  },
+  "metadata": {
+    "description": "Jimmy Dagher's Claude Code plugins — each plugin lives in its own repository and is registered here."
+  },
+  "plugins": [
+    {
+      "name": "sdsi",
+      "source": {
+        "source": "github",
+        "repo": "jimmydagher/sdsi-plugin"
+      },
+      "description": "Software Development Standard Instructions — a language-neutral development standard as topic skills (sdsi:core, sdsi:all, sdsi:logging, sdsi:errors, sdsi:versioning, …) and a scripted release chain."
+    }
+  ]
+}
