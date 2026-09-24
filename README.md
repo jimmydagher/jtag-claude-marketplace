@@ -25,9 +25,12 @@ every plugin lives in its own repository.
    ```json
    {
      "name": "<name>",
-     "source": { "source": "github", "repo": "jimmydagher/<name>-plugin" },
+     "source": { "source": "url", "url": "https://github.com/jimmydagher/<name>-plugin.git" },
      "description": "<one line>"
    }
    ```
+
+   Use an HTTPS `url` source, not `"source": "github"`: the `github` form
+   clones over SSH, which fails on machines without a GitHub SSH key.
 
 3. Add a row to the table above.

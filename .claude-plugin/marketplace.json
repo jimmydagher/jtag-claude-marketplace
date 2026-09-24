@@ -10,16 +10,16 @@
     {
       "name": "sdsi",
       "source": {
-        "source": "github",
-        "repo": "jimmydagher/sdsi-plugin"
+        "source": "url",
+        "url": "https://github.com/jimmydagher/sdsi-plugin.git"
       },
       "description": "Software Development Standard Instructions — a language-neutral development standard as topic skills (sdsi:core, sdsi:all, sdsi:logging, sdsi:errors, sdsi:versioning, …) and a scripted release chain."
     },
     {
       "name": "council",
       "source": {
-        "source": "github",
-        "repo": "jimmydagher/council-plugin"
+        "source": "url",
+        "url": "https://github.com/jimmydagher/council-plugin.git"
       },
       "description": "Contractor-style reviewer lenses for documentation, designs, plans, and business proposals — council:it, council:bu, council:all, and each lens individually."
     }
