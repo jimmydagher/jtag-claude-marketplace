@@ -1,11 +1,10 @@
 # jtag-claude-marketplace
 
-Jimmy Dagher's Claude Code plugin marketplace. It holds only the registry —
-every plugin lives in its own repository.
+Jimmy Dagher's Claude Code plugin marketplace. It holds only the registry — every plugin lives in its own repository.
 
 ## Install
 
-```
+```text
 /plugin marketplace add jimmydagher/jtag-claude-marketplace
 /plugin install <plugin>@jtag-claude-marketplace
 ```
@@ -30,7 +29,6 @@ every plugin lives in its own repository.
    }
    ```
 
-   Use an HTTPS `url` source, not `"source": "github"`: the `github` form
-   clones over SSH, which fails on machines without a GitHub SSH key.
+Use an HTTPS `url` source, not `"source": "github"`: the `github` form clones over SSH, which fails on machines without a GitHub SSH key.
 
 3. Add a row to the table above.
