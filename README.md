@@ -37,7 +37,7 @@ Leave out `"version"` — the sync workflow below adds it on its next run.
 
 ## Plugin versions and updates
 
-Claude Code only offers a plugin update when the plugin's `"version"` in `marketplace.json` changes, so every plugin release has to touch this repo. That's automated: `.github/workflows/sync-versions.yml` runs every 30 minutes, reads each plugin's `.claude-plugin/plugin.json` from its repo's default branch (`scripts/sync_versions.py`), and when any version differs opens a PR on `sync/plugin-versions` and merges it. This covers every plugin registered here, including new ones, with no setup in the plugin repos.
+Claude Code only offers a plugin update when the plugin's `"version"` in `marketplace.json` changes, so every plugin release has to touch this repo. That's automated: `.github/workflows/sync-versions.yml` runs every 30 minutes, reads each plugin's `.claude-plugin/plugin.json` from its repo's default branch (`scripts/sync_versions.py`), and when any version differs commits the change straight to `main` — no PR, nothing to approve. This covers every plugin registered here, including new ones, with no setup in the plugin repos.
 
 - **Run it right after a release** (local shell, any directory): `gh workflow run sync-versions.yml -R jimmydagher/jtag-claude-marketplace`
 - **Preview locally** (repo root): `python scripts/sync_versions.py`, which rewrites `marketplace.json` and exits 10 when something changed, 0 when everything is current.
@@ -45,5 +45,6 @@ Claude Code only offers a plugin update when the plugin's `"version"` in `market
 
 One-time settings this depends on:
 
-- This repo: Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to create and approve pull requests".
-- Organization settings → Plugins → this marketplace's menu → **Sync automatically** on, so the org picks up the merged version change.
+- This repo: Settings → Actions → General → Workflow permissions → "Read and write permissions" (the workflow also requests `contents: write`).
+- `main` must accept pushes from GitHub Actions: if a branch protection rule or ruleset is ever added, let `github-actions[bot]` bypass it.
+- Organization settings → Plugins → this marketplace's menu → **Sync automatically** on, so the org picks up the version change.
