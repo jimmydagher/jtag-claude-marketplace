@@ -7,7 +7,7 @@ a GitHub "url" source, this reads .claude-plugin/plugin.json from the plugin
 repo's default branch and writes its version into the entry. A plugin added
 later is picked up with no extra setup.
 
-Run by .github/workflows/sync-versions.yml, which opens and merges the PR.
+Run by .github/workflows/sync-versions.yml, which commits the result to main.
 Run by hand (repo root) to preview:  python scripts/sync_versions.py
 
 Exit codes: 0 = nothing to change, 10 = marketplace.json was updated,
