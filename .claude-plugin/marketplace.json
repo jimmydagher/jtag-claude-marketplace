@@ -24,6 +24,15 @@
         "url": "https://github.com/jimmydagher/council-plugin.git"
       },
       "description": "Contractor-style reviewer lenses for documentation, designs, plans, and business proposals — council:it, council:bu, council:all, and each lens individually."
+    },
+    {
+      "name": "cortex",
+      "version": "1.2.0",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jimmydagher/cortex-plugin.git"
+      },
+      "description": "Cortex, the MCP second brain, in Claude Code: cortex:me saves something to your own personal layer and cortex:share proposes something for the shared memory."
     }
   ]
 }
