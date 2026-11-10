@@ -32,7 +32,7 @@
         "source": "url",
         "url": "https://github.com/jimmydagher/cortex-plugin.git"
       },
-      "description": "Cortex, the MCP second brain, in Claude Code: a light above the prompt shows whether your brain is on, off or unreachable, plus cortex:me and cortex:share."
+      "description": "Cortex, the MCP second brain, in Claude Code: cortex:me saves something to your own personal layer and cortex:share proposes something for the shared memory."
     }
   ]
 }
